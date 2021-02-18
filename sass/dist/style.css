@@ -1,0 +1,419 @@
+@font-face {
+  font-family: "vazir";
+  src: url(../font/Vazir-Black.woff2), url(../font/Vazir-Black.woff), url(../font/Vazir-Black.ttf), url(../font/Vazir-Black.eot);
+}
+* {
+  font-family: vazir;
+  user-select: none;
+}
+
+div.start-azmon {
+  padding: 0px 30px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto 0px;
+  position: relative;
+  position: sticky;
+  top: 10px;
+  z-index: 1000000000000000000000000000000000000000000000;
+}
+div.start-azmon:before {
+  content: "";
+  background: linear-gradient(45deg, #00b7ff 60%, #72ffec 60%);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(4px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+  border-radius: 10px;
+}
+div.start-azmon:before {
+  opacity: 1;
+}
+div.start-azmon:after {
+  background: #ffffff;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+@keyframes glowing {
+  0% {
+    background-position: 50% 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: -50% 0;
+  }
+}
+div.start-azmon p.p {
+  font-weight: bold;
+  font-size: 2rem;
+  position: relative;
+}
+div.start-azmon p.p::before, div.start-azmon p.p::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: rgba(4, 0, 255, 0.933);
+  display: block;
+  transition: width 0.5s;
+}
+div.start-azmon p.p:hover::before {
+  width: 100%;
+}
+div.start-azmon p.p:hover::after {
+  width: 100%;
+}
+div.start-azmon div.top-left p.te {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+div.start-azmon div.top-left p.te::after {
+  content: " ";
+  width: 0%;
+  height: 3px;
+  background: rgba(4, 0, 255, 0.933);
+  color: rgba(4, 0, 255, 0.933);
+  display: block;
+  transition: width 0.5s;
+}
+div.start-azmon div.top-left p.te:hover::after {
+  width: 100%;
+}
+div.start-azmon div.top-left p.te i {
+  color: #f84c4c;
+}
+div.start-azmon p#p-azmon {
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 50px;
+  display: block;
+  text-align: center;
+}
+div.start-azmon div.topall {
+  width: 32%;
+  display: inline-block;
+}
+div.start-azmon div.topall p {
+  width: 100%;
+}
+div.start-azmon img.img {
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(2px 4px 6px white);
+  transition: 1s;
+}
+div.start-azmon img.img:hover {
+  transition: 0.5s;
+  filter: drop-shadow(0px 0px 0px black);
+}
+div.start-azmon .top-content {
+  width: 100%;
+  box-sizing: border-box;
+  height: 94%;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 3rem;
+  padding: 0px;
+}
+
+img#img-rahvar {
+  display: none;
+}
+
+.btn-info {
+  background: #fff;
+  box-shadow: 1px 2px 2px #949494;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background: #ffffff;
+  width: 220px;
+  margin: 0 auto;
+  height: 50px;
+  border: none;
+  outline: none;
+  display: block;
+  margin: 0 auto 20px;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+  border-radius: 10px;
+  color: black;
+}
+.btn-info:before {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(4px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+}
+.btn-info:hover:before {
+  opacity: 1;
+}
+.btn-info:after {
+  background: #ffffff;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+div.radioall {
+  background-color: var(--background);
+  display: block;
+  padding: 50px;
+  max-width: 960px;
+  border: 3px solid var(--primary);
+  padding: 30px 63px;
+  margin: 100px auto;
+  box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green), 20px -20px 0 -3px var(--background), 20px -20px var(--yellow), 30px -30px 0 -3px var(--background), 30px -30px var(--orange), 40px -40px 0 -3px var(--background), 40px -40px var(--red);
+  transition: box-shadow 1s, top 1s, left 1s;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+div.radioall p {
+  font-size: 2rem;
+  text-shadow: 1px 1px 0px blue;
+}
+div.radioall:hover {
+  top: -40px;
+  left: 40px;
+  box-shadow: 0 0 0 -3px var(--background), 0 0 0 0 var(--green), 0 0 0 -3px var(--background), 0 0 0 0 var(--yellow), 0 0 0 -3px var(--background), 0 0 0 0 var(--orange), 0 0 0 -3px var(--background), 0 0 0 0 var(--red);
+}
+div.radioall img {
+  max-width: 100%;
+}
+
+label {
+  font-weight: bold;
+  border: none;
+  outline: none;
+  color: black;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  width: 99%;
+  display: block;
+  cursor: pointer;
+  background: white;
+  padding: 10px 5px;
+  margin: 7px 0px;
+  box-shadow: 4px 4px 4px 0px #d2d3d7;
+  transition: 1s;
+  font-size: 1.1rem;
+}
+label::before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+label:active {
+  color: #000;
+}
+label:hover::before {
+  opacity: 1;
+  box-shadow: none;
+}
+label::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffff;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+label:hover {
+  animation: shadow-wave 1s ease infinite;
+}
+
+:root {
+  --primary: #555BFF;
+  --secondary: #22D2A0;
+  --background: white;
+  --green: #1FC11B;
+  --yellow: #FFD913;
+  --orange: #FF9C55;
+  --red: #FF5555;
+}
+
+div.submit {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.submit span {
+  margin: 0 auto;
+  padding: 10px 53px;
+  border-radius: 20px;
+  background: aquamarine;
+  margin-bottom: 47px;
+  transform: rotateX(6deg);
+  box-shadow: 0px 0px 20px 4px #0bffff59;
+  transition: box-shadow 1s;
+}
+div.submit span:hover {
+  box-shadow: 0px 0px 20px 4px #ff0b0b59;
+}
+
+@media (max-width: 791px) {
+  div.start-azmon div.top-left {
+    width: 100%;
+  }
+  div.start-azmon div.top-content {
+    display: block;
+    margin: 45px auto 0px;
+    width: 100%;
+  }
+  div.start-azmon div.top-content .btn-info {
+    padding: 0px;
+    margin: 0px;
+    margin: 0 atuo;
+    margin: 0 auto;
+    display: block;
+  }
+  div.start-azmon img.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 408px) {
+  div.start-azmon img.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 1139px) {
+  div.radioall {
+    box-shadow: 0px -10px 0 -3px var(--background), 0px -10px var(--green), 0px -20px 0 -3px var(--background), 0px -20px var(--yellow), 0px -30px 0 -3px var(--background), 0px -30px var(--orange), 0px -41px 0 -3px var(--background), 0px -40px var(--red);
+  }
+  div.radioall:hover {
+    top: -40px;
+    left: 0px;
+    box-shadow: 0 0 0 -3px var(--background), 0 0 0 0 var(--green), 0 0 0 -3px var(--background), 0 0 0 0 var(--yellow), 0 0 0 -3px var(--background), 0 0 0 0 var(--orange), 0 0 0 -3px var(--background), 0 0 0 0 var(--red);
+  }
+}
+.info {
+  display: block;
+  margin: 0 atuo;
+  margin: 0px auto;
+  margin: -28px auto 20px;
+  width: 100%;
+  height: 37px;
+  transform: skewX(10deg);
+  background: aquamarine;
+  border: none;
+  font-size: 1.4rem;
+}
+
+* {
+  padding: 0px;
+}
+
+.card1:hover {
+  animation: shadow-wave5 1s ease infinite;
+}
+
+@keyframes shadow-wave5 {
+  0% {
+    border: 3px solid var(--primary);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green), 20px -20px 0 -3px var(--background), 20px -20px var(--yellow), 30px -30px 0 -3px var(--background), 30px -30px var(--orange), 40px -40px 0 -3px var(--background), 40px -40px var(--red);
+  }
+  20% {
+    border: 3px solid var(--red);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--primary), 20px -20px 0 -3px var(--background), 20px -20px var(--green), 30px -30px 0 -3px var(--background), 30px -30px var(--yellow), 40px -40px 0 -3px var(--background), 40px -40px var(--orange);
+  }
+  40% {
+    border: 3px solid var(--orange);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--red), 20px -20px 0 -3px var(--background), 20px -20px var(--primary), 30px -30px 0 -3px var(--background), 30px -30px var(--green), 40px -40px 0 -3px var(--background), 40px -40px var(--yellow);
+  }
+  60% {
+    border: 3px solid var(--yellow);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--orange), 20px -20px 0 -3px var(--background), 20px -20px var(--red), 30px -30px 0 -3px var(--background), 30px -30px var(--primary), 40px -40px 0 -3px var(--background), 40px -40px var(--green);
+  }
+  80% {
+    border: 3px solid var(--green);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--yellow), 20px -20px 0 -3px var(--background), 20px -20px var(--orange), 30px -30px 0 -3px var(--background), 30px -30px var(--red), 40px -40px 0 -3px var(--background), 40px -40px var(--primary);
+  }
+  100% {
+    border: 3px solid var(--primary);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green), 20px -20px 0 -3px var(--background), 20px -20px var(--yellow), 30px -30px 0 -3px var(--background), 30px -30px var(--orange), 40px -40px 0 -3px var(--background), 40px -40px var(--red);
+  }
+}

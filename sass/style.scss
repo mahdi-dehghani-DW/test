@@ -1,0 +1,491 @@
+    @font-face {
+        font-family: "vazir";
+        src: url(../font/Vazir-Black.woff2), url(../font/Vazir-Black.woff), url(../font/Vazir-Black.ttf), url(../font/Vazir-Black.eot);
+    }
+    
+    * {
+        font-family: vazir;
+        user-select: none;
+    }
+    
+    $color-p: rgba(4, 0, 255, 0.933);
+    $color-r: rgb(248, 76, 76);
+    $font-sm:1.2rem;
+    $font-lg: 1.5rem;
+    $font-b: 2rem;
+    @mixin padding-border-box {
+        padding: 0px 30px;
+        box-sizing: border-box;
+    }
+    
+    @mixin font($fontiw:600, $font-size:1.1rem) {
+        font-weight: $fontiw;
+        font-size: $font-size;
+    }
+    
+    @mixin after2 {
+        background: #ffffff;
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+    
+    @mixin afters {
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(4px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .1s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    @mixin btn() {
+        box-shadow: 1px 2px 2px rgb(148, 148, 148);
+        @include font(bold, $font-lg);
+        background: #ffffff;
+        width: 220px;
+        margin: 0 auto;
+        height: 50px;
+        border: none;
+        outline: none;
+        display: block;
+        margin: 0 auto 20px;
+        cursor: pointer;
+        position: relative;
+        z-index: 5;
+        border-radius: 10px;
+        color: black;
+    }
+    
+    @mixin mykey {
+        margin-top: 17px;
+        background-color: var(--background);
+        display: block;
+        width: 98%;
+        cursor: pointer;
+        background: rgb(255, 254, 239);
+        padding: 5px;
+        border: 3px solid var(--primary);
+        box-shadow: 5px -5px 0 -3px var(--background), 5px -5px var(--green), 10px -10px 0 -3px var(--background), 10px -10px var(--yellow), 10px -10px 0 -3px var(--background), 10px -10px var(--orange), 15px -15px 0 -3px var(--background), 15px -15px var(--red);
+        @keyframes shadow-wave {
+            0% {
+                border: 3px solid var(--primary);
+                box-shadow: 5px -5px 0 -3px var(--background), 5px -5px var(--green), 10px -10px 0 -3px var(--background), 10px -10px var(--yellow), 10px -10px 0 -3px var(--background), 10px -10px var(--orange), 15px -15px 0 -3px var(--background), 15px -15px var(--red);
+            }
+            20% {
+                border: 3px solid var(--red);
+                box-shadow: 5px -5px 0 -3px var(--background), 5px -5px var(--red), 10px -10px 0 -3px var(--background), 10px -10px var(--yellow), 10px -10px 0 -3px var(--background), 10px -10px var(--orange), 15px -15px 0 -3px var(--background), 15px -15px var(--green);
+            }
+            40% {
+                border: 3px solid var(--orange);
+                box-shadow: 5px -5px 0 -3px var(--background), 5px -5px var(--green), 10px -10px 0 -3px var(--background), 10px -10px var(--red), 10px -10px 0 -3px var(--background), 10px -10px var(--orange), 15px -15px 0 -3px var(--background), 15px -15px var(--yellow);
+            }
+            60% {
+                border: 3px solid var(--yellow);
+                box-shadow: 5px -5px 0 -3px var(--background), 5px -5px var(--green), 10px -10px 0 -3px var(--background), 10px -10px var(--yellow), 10px -10px 0 -3px var(--background), 10px -10px var(--red), 15px -15px 0 -3px var(--background), 15px -15px var(--orange);
+            }
+        }
+    }
+    
+    div.start-azmon {
+        &:before {
+            content: '';
+            background: linear-gradient(45deg, rgb(0, 183, 255)60%, #72ffec 60%);
+            @include afters();
+        }
+        &:before {
+            opacity: 1;
+        }
+        &:after {
+            @include after2();
+        }
+        @keyframes glowing {
+            0% {
+                background-position: 50% 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: -50% 0;
+            }
+        }
+        @include padding-border-box;
+        width: 100%;
+        max-width: 1000px;
+        margin: 20px auto 0px;
+        position: relative;
+        p.p {
+            @include font(bold, $font-b);
+            position: relative;
+            &::before,
+            &::after {
+                content: "";
+                width: 0%;
+                height: 3px;
+                background: $color-p;
+                display: block;
+                transition: width .5s;
+            }
+            &:hover::before {
+                width: 100%;
+            }
+            &:hover::after {
+                width: 100%;
+            }
+        }
+        div.top-left p.te {
+            @include font();
+            &::after {
+                content: " ";
+                width: 0%;
+                height: 3px;
+                background: $color-p;
+                color: $color-p;
+                display: block;
+                transition: width .5s;
+            }
+            &:hover::after {
+                width: 100%;
+            }
+            i {
+                color: $color-r;
+            }
+        }
+        p#p-azmon {
+            @include font(900, $font-b);
+            margin: 50px;
+            display: block;
+            text-align: center;
+        }
+        div.topall {
+            width: 32%;
+            display: inline-block;
+        }
+        div.topall p {
+            width: 100%;
+        }
+        img.img {
+            display: block;
+            margin: 0 auto;
+            filter: drop-shadow(2px 4px 6px rgb(255, 255, 255));
+            transition: 1s;
+            &:hover {
+                transition: .5s;
+                filter: drop-shadow(0px 0px 0px black);
+            }
+        }
+        position: sticky;
+        top: 10px;
+        z-index: 999999999999999999999999999999999999999999999;
+        .top-content {
+            width: 100%;
+            box-sizing: border-box;
+            height: 94%;
+            margin: 0px auto;
+            text-align: center;
+            font-size: 3rem;
+            padding: 0px;
+        }
+    }
+    
+    img#img-rahvar {
+        display: none;
+    }
+    
+    .btn-info {
+        background: #fff;
+        @include btn();
+        &:before {
+            @include afters();
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+        }
+        &:hover:before {
+            opacity: 1;
+        }
+        &:after {
+            @include after2();
+        }
+        @keyframes glowing {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+    }
+    
+    div.radioall {
+        p {
+            font-size: 2rem;
+            text-shadow: 1px 1px 0px blue;
+        }
+        background-color: var(--background);
+        display: block;
+        padding: 50px;
+        max-width: 960px;
+        border: 3px solid var(--primary);
+        padding: 30px 63px;
+        margin: 100px auto;
+        box-shadow: 10px -10px 0 -3px var(--background),
+        10px -10px var(--green),
+        20px -20px 0 -3px var(--background),
+        20px -20px var(--yellow),
+        30px -30px 0 -3px var(--background),
+        30px -30px var(--orange),
+        40px -40px 0 -3px var(--background),
+        40px -40px var(--red);
+        transition: box-shadow 1s,
+        top 1s,
+        left 1s;
+        position: relative;
+        top: 0;
+        left: 0;
+        border-radius: 10px;
+        &:hover {
+            top: -40px;
+            left: 40px;
+            box-shadow: 0 0 0 -3px var(--background), 0 0 0 0 var(--green), 0 0 0 -3px var(--background), 0 0 0 0 var(--yellow), 0 0 0 -3px var(--background), 0 0 0 0 var(--orange), 0 0 0 -3px var(--background), 0 0 0 0 var(--red);
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    
+    label {
+        font-weight: bold;
+        border: none;
+        outline: none;
+        color: black;
+        background: #111;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+        width: 99%;
+        display: block;
+        cursor: pointer;
+        background: rgb(255, 255, 255);
+        padding: 10px 5px;
+        margin: 7px 0px;
+        box-shadow: 4px 4px 4px 0px #d2d3d7;
+        transition: 1s;
+        font-size: 1.1rem;
+        &::before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        &:active {
+            color: #000
+        }
+        &:hover::before {
+            opacity: 1;
+            box-shadow: none;
+        }
+        &::after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #ffff;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        @keyframes glowing {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+        //     .
+        //     .
+        // @include mykey();
+        //     .
+        //     .
+        &:hover {
+            animation: shadow-wave 1s ease infinite;
+        }
+    }
+    
+     :root {
+        --primary: #555BFF;
+        --secondary: #22D2A0;
+        --background: white;
+        --green: #1FC11B;
+        --yellow: #FFD913;
+        --orange: #FF9C55;
+        --red: #FF5555;
+    }
+    
+    div.submit {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            margin: 0 auto;
+            padding: 10px 53px;
+            border-radius: 20px;
+            background: aquamarine;
+            margin-bottom: 47px;
+            transform: rotateX(6deg);
+            box-shadow: 0px 0px 20px 4px #0bffff59;
+            transition: box-shadow 1s;
+            &:hover {
+                box-shadow: 0px 0px 20px 4px #ff0b0b59;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    @media (max-width:791px) {
+        div.start-azmon {
+            div.top-left {}
+            div.top-left {
+                width: 100%;
+            }
+            div.top-content {
+                display: block;
+                margin: 45px auto 0px;
+                width: 100%;
+                .btn-info {
+                    padding: 0px;
+                    margin: 0px;
+                    margin: 0 atuo;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+            img.img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+    
+    @media (max-width:408px) {
+        div.start-azmon {
+            img.img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+    
+    @media (max-width:1139px) {
+        div.radioall {
+            box-shadow: 0px -10px 0 -3px var(--background), 0px -10px var(--green), 0px -20px 0 -3px var(--background), 0px -20px var(--yellow), 0px -30px 0 -3px var(--background), 0px -30px var(--orange), 0px -41px 0 -3px var(--background), 0px -40px var(--red);
+            &:hover {
+                top: -40px;
+                left: 0px;
+                box-shadow: 0 0 0 -3px var(--background), 0 0 0 0 var(--green), 0 0 0 -3px var(--background), 0 0 0 0 var(--yellow), 0 0 0 -3px var(--background), 0 0 0 0 var(--orange), 0 0 0 -3px var(--background), 0 0 0 0 var(--red);
+            }
+        }
+    }
+    
+    .info {
+        display: block;
+        margin: 0 atuo;
+        margin: 0px auto;
+        margin: -28px auto 20px;
+        width: 100%;
+        height: 37px;
+        transform: skewX(10deg);
+        background: aquamarine;
+        border: none;
+        font-size: 1.4rem;
+    }
+    
+    * {
+        padding: 0px;
+    }
+    
+    .card1:hover {
+        animation: shadow-wave5 1s ease infinite;
+    }
+    
+    @keyframes shadow-wave5 {
+        0% {
+            border: 3px solid var(--primary);
+            box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green), 20px -20px 0 -3px var(--background), 20px -20px var(--yellow), 30px -30px 0 -3px var(--background), 30px -30px var(--orange), 40px -40px 0 -3px var(--background), 40px -40px var(--red);
+        }
+        20% {
+            border: 3px solid var(--red);
+            box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--primary), 20px -20px 0 -3px var(--background), 20px -20px var(--green), 30px -30px 0 -3px var(--background), 30px -30px var(--yellow), 40px -40px 0 -3px var(--background), 40px -40px var(--orange);
+        }
+        40% {
+            border: 3px solid var(--orange);
+            box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--red), 20px -20px 0 -3px var(--background), 20px -20px var(--primary), 30px -30px 0 -3px var(--background), 30px -30px var(--green), 40px -40px 0 -3px var(--background), 40px -40px var(--yellow);
+        }
+        60% {
+            border: 3px solid var(--yellow);
+            box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--orange), 20px -20px 0 -3px var(--background), 20px -20px var(--red), 30px -30px 0 -3px var(--background), 30px -30px var(--primary), 40px -40px 0 -3px var(--background), 40px -40px var(--green);
+        }
+        80% {
+            border: 3px solid var(--green);
+            box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--yellow), 20px -20px 0 -3px var(--background), 20px -20px var(--orange), 30px -30px 0 -3px var(--background), 30px -30px var(--red), 40px -40px 0 -3px var(--background), 40px -40px var(--primary);
+        }
+        100% {
+            border: 3px solid var(--primary);
+            box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green), 20px -20px 0 -3px var(--background), 20px -20px var(--yellow), 30px -30px 0 -3px var(--background), 30px -30px var(--orange), 40px -40px 0 -3px var(--background), 40px -40px var(--red);
+        }
+    }
+    
+    label.active:before {
+        opacity: 1;
+    }
+    
+    label.active2 {
+        background: red;
+        position: initial;
+    }
+    
+    label.active32 {
+        background: var(--green);
+        position: initial;
+    }

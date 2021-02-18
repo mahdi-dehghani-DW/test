@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/plugin-css/button.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>آزمون آیین نامه</title>
+</head>
+<style>
+
+</style>
+
+<body dir="rtl">
+    <span id="top-scroll"></span>
+    <img src="img/rahvar.png" alt="rahver" height="236px" id="img-rahvar">
+    <div class="azmon ">
+
+        <div class="start-azmon gradient-border" id="box">
+
+            <div class="top-left topall">
+
+                <p class="p">قوانین آزمون...</p>
+                <p class="te"> <i class="fa fa-mail-reply"></i> زمان آزمون 20 دقیقه میباشد
+                </p>
+                <p class="te"><i class="fa fa-mail-reply"></i> سوالات چهار گزینه ای هست
+                </p>
+                <p class="te"> <i class="fa fa-mail-reply"></i> ازمون دیگر تکرار نمیشود
+                </p>
+                <p class="te"><i class="fa fa-mail-reply"></i> اگر بیش از چهار مورد پاسخ غلط بدید مردود هستید
+                </p>
+            </div>
+            <div class="top-content topall" id="myHeader">
+
+
+                <i id="time-start"></i>
+                <button class="btn btn-info" type="button" onclick="startb()" id="button-start">شروع آزمون</button>
+                <div id="natayeg" style="display: none;">
+                    <p>نتایج آزمون</p>
+
+                    <p>تعداد پاسخ صحیح شما : <i class="true1"></i></p>
+                    <p>تعداد پاسخ غلط شما : <i class="false1"></i></p>
+                    <p class="nati"> وضعیت قبولی یا مردودی شما :<i class="natige1"></i></p>
+                    <button class="btn-info info">
+                        <a href="#top-scroll" style="color: black;text-decoration: none;display: block;">دیدن سوالات</a>
+                        
+                        </button>
+
+
+                </div>
+
+
+
+            </div>
+            <div class="top-top-raght topall">
+                <img src="img/rahvar.png" alt="rahver" height="236px" class="img">
+            </div>
+        </div>
+        <div class="box-azmon pulse">
+            <div class="azmon-text">
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon1 radioall ">
+                    <p><span> 1-  </span>در برخورد با یک مصدوم بیهوش مهم ترین اقدام چیست؟</p>
+                    <br>
+                    <label class='m1  glow-on-hover' for="q1" class="label">
+
+                     <input type="radio"  name="r1" id="q1" class="radio1  true ">
+                     باز کردن راه تنفسی و حفظ گردش خون
+                    </label>
+                    <br>
+                    <label class='m  glow-on-hover' for="q4">
+                       
+                        <input type="radio" name="r1" id="q4" class="radio1  false ">
+                        گرفتن فشار خون بیهوش
+                       </label>
+                    <br>
+                    <label class='m  glow-on-hover' for="q3">
+                       
+                        <input type="radio" name="r1" id="q3" class="radio1  false ">
+                        بلند کردن دست های مصدوم
+                       </label>
+                    <br>
+                    <label class='m  glow-on-hover' for="q2">
+                       
+                        <input type="radio" name="r1" id="q2" class="radio1  false ">
+                        نشاندن مصدوم روی صندلی
+                       </label>
+                </div>
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon2 radioall box-all">
+                    <p><span> 2 -  </span>کدام یک از موارد زیر جان فرد را نسبت به موارد دیگر دیرتر به خطر می اندازد؟</p>
+                    <br>
+                    <label class='m glow-on-hover' for="qp1">
+                            
+                     <input type="radio" name="rp1" id="qp1" class="radio1  false ">
+                     فقدان تنفس
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qp4">
+                       
+                        <input type="radio" name="rp1" id="qp4" class="radio1  false ">
+                        فقدان ضربان قلب
+                       </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qp3">
+                       
+                        <input type="radio" name="rp1" id="qp3" class="radio1  true ">
+                        بالا بودن درجه حرارت بدن
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qp2">
+                       
+                        <input type="radio" name="rp1" id="qp2" class="radio1  false ">
+                        خونریزی شدید
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon3 radioall box-all">
+                    <p><span> 3 -  </span>سبقت گرفتن از وسیله نقلیه ای که خود در حال سبقت است …؟</p>
+                    <br>
+                    <label class='m glow-on-hover' for="qo1">
+                            
+                     <input type="radio" name="ro1" id="qo1" class="radio1  false ">
+                     مجاز است
+                    </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qo4">
+                       
+                        <input type="radio" name="ro1" id="qo4" class="radio1  true ">
+                        ممنوع است مگر در راهی که به دلیل وجود سه خط عبور یا بیشتر این عمل مجاز باشد
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qo3">
+                       
+                        <input type="radio" name="ro1" id="qo3" class="radio1  false ">
+                        چنانچه احتمال تصادف نباشد مجاز است
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qo2">
+                       
+                        <input type="radio" name="ro1" id="qo2" class="radio1  false ">
+                        تحت هر شرایطی ممنوع است
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon4 radioall box-all">
+                    <p><span> 4 -  </span>انجام کدام یک از اعمال زیر در خصوص زخمیهای صحنه تصادف نادرست است؟</p>
+                    <br>
+                    <label class='m glow-on-hover' for="qy1">
+                            
+                     <input type="radio" name="ry1" id="qy1" class="radio1  false ">
+                     دلجویی از آن ها
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qy4">
+                       
+                        <input type="radio" name="ry1" id="qy4" class="radio1  false ">
+                        گرم نگه داشتن آنها
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qy3">
+                       
+                        <input type="radio" name="ry1" id="qy3" class="radio1  false ">
+                        ایجاد شرایطی که زخمیها تنها نمانند
+                       </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qy2">
+                       
+                        <input type="radio" name="ry1" id="qy2" class="radio1  true ">
+                        دادن خوراکی به افراد زخمی
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon5 radioall box-all">
+                    <p><span> 5 -  </span>استفاده از کدام نوع کمربند ایمنی در خودرو الزامی است؟</p>
+                    <br>
+                    <label class='m glow-on-hover' for="ql1">
+                            
+                     <input type="radio" name="rl1" id="ql1" class="radio1  false ">
+                     نوع کمربند ایمنی مهم نیست
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="ql4">
+                       
+                        <input type="radio" name="rl1" id="ql4" class="radio1  false ">
+                        دو نقطه ای
+                       </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="ql3">
+                       
+                        <input type="radio" name="rl1" id="ql3" class="radio1  true ">
+                        سه نقطه ای
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="ql2">
+                       
+                        <input type="radio" name="rl1" id="ql2" class="radio1  false ">
+                        کمربند ران
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon6 radioall box-all">
+                    <p><span> 6 -  </span>با مشاهده چراغ قرمز راهنمایی و در صورت نبودن خط ایست برای توقف در چند متری چراغ باید توقف کرد؟</p>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qk1">
+                            
+                     <input type="radio" name="rk1" id="qk1" class="radio1  true ">
+                     پنج متری
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qk4">
+                       
+                        <input type="radio" name="rk1" id="qk4" class="radio1  false ">
+                        سه متری
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qk3">
+                       
+                        <input type="radio" name="rk1" id="qk3" class="radio1  false ">
+                        دو متری
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qk2">
+                       
+                        <input type="radio" name="rk1" id="qk2" class="radio1  false ">
+                        چهار متری
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon7 radioall box-all">
+                    <p><span> 7-  </span>کدام جمله درباره کیسه هوا صحیح نمی باشد؟</p>
+                    <br>
+                    <label class='m glow-on-hover' for="qj1">
+                            
+                     <input type="radio" name="rj1" id="qj1" class="radio1  false ">
+                     کیسه هوا هنگام تشخیص ضربه ناشی از تصادف در کسری از ثانیه باز می شود
+                    </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qj4">
+                       
+                        <input type="radio" name="rj1" id="qj4" class="radio1  true ">
+                        با وجود کیسه هوا دیگر نیازی به کمربند ایمنی نمی باشد
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qj3">
+                       
+                        <input type="radio" name="rj1" id="qj3" class="radio1  false ">
+                        فعال شدن کیسه هوا در حالتی که کمربند ایمنی بسته نشده باشد، نتایج مخرب تری خواهد داشت
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qj2">
+                       
+                        <input type="radio" name="rj1" id="qj2" class="radio1  false ">
+                        یکی از تکنولوژی های پیشرفته در زمینه ایمنی خودرو، سیستم کیسه هوا یا ایربگ می باشد
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon8 radioall box-all">
+                    <p><span> 8 -  </span>قرار گرفتن طولانی مدت رانندگان در شرایط نامساعد زیست محیلی منجر به چه می شود؟</p>
+                    <br>
+                    <label class='m glow-on-hover' for="qh1">
+                            
+                     <input type="radio" name="rh1" id="qh1" class="radio1  false ">
+                     کسب انرژی مثبت و تلاش مضاعف
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qh4">
+                       
+                        <input type="radio" name="rh1" id="qh4" class="radio1  false ">
+                        رانندگی سالم و حفظ حقوق اجتماعی دیگران
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qh3">
+                       
+                        <input type="radio" name="rh1" id="qh3" class="radio1  false ">
+                        تحریک پذیری، عصبانیت زود هنگام و پرخاشگری
+                       </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qh2">
+                       
+                        <input type="radio" name="rh1" id="qh2" class="radio1  true ">
+                        رانندگی ایمن و رعایت اصول رانندگی صحیح
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon9 radioall box-all">
+                    <p><span> 9 -  </span>استفاده از چراغ های چشمک زن و رنگا رنگ در وسایل نقلیه … ؟</p>
+                    <br>
+                    <label class='m glow-on-hover' for="qg1">
+                            
+                     <input type="radio" name="rg1" id="qg1" class="radio1  false ">
+                     برای دید بیشتر اشیا و اشخاص مانعی ندارد
+                    </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qg4">
+                       
+                        <input type="radio" name="rg1" id="qg4" class="radio1  true ">
+                        ممنوع است مگر با مجوزهای لازم از مراجع ذیصلاح
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qg3">
+                       
+                        <input type="radio" name="rg1" id="qg3" class="radio1  false ">
+                        مانعی ندارد
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qg2">
+                       
+                        <input type="radio" name="rg1" id="qg2" class="radio1  false ">
+                        تحت هر شرایطی حتی اخذ مجوز نیز ممنوع است
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon10 radioall box-all">
+                    <p><span> 10 -  </span>در شهرها و مناطق مسکونی، در خیابان های شریان اصلی حداکثر سرعت چند کیلومتر در ساعت است؟</p>
+                    <br>
+                    <label class='m glow-on-hover' for="qf1">
+                            
+                     <input type="radio" name="rf1" id="qf1" class="radio1  false ">
+                     ۱۰۰
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qf4">
+                       
+                        <input type="radio" name="rf1" id="qf4" class="radio1  false ">
+                        ۹۵
+                       </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qf3">
+                       
+                        <input type="radio" name="rf1" id="qf3" class="radio1  true ">
+                        ۶۰
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qf2">
+                       
+                        <input type="radio" name="rf1" id="qf2" class="radio1  false ">
+                        ۸۵
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon11 radioall box-all">
+                    <p><span> 11 -  </span>رانندگان وسیله نقلیه امدادی در چه مواردی مجاز به استفاده از سوت خطر آژیر و زنگ مخصوص و چراغ گردان می باشند ؟</p>
+                    <br>
+                    <label class='m glow-on-hover' for="qd1">
+                            
+                     <input type="radio" name="rd1" id="qd1" class="radio1  false ">
+                     جهت انجام کارهای مهم
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qd4">
+                       
+                        <input type="radio" name="rd1" id="qd4" class="radio1  false ">
+                        جهت اطلاع به راننده جلویی
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qd3">
+                       
+                        <input type="radio" name="rd1" id="qd3" class="radio1  false ">
+                        در هنگام مواجه با خطر
+                       </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qd2">
+                       
+                        <input type="radio" name="rd1" id="qd2" class="radio1  true ">
+                        جهت انجام عملیات ها مهم و فوری
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon12 radioall box-all">
+                    <p><span> 12 -  </span>پایین بودن سطح کدام یک از موارد زیر می تواند منجر به حادثه شود ؟</p>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qs1">
+                            
+                     <input type="radio" name="rs1" id="qs1" class="radio1  true ">
+                     روغن ترمز
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qs4">
+                       
+                        <input type="radio" name="rs1" id="qs4" class="radio1  false ">
+                        آب باتری
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qs3">
+                       
+                        <input type="radio" name="rs1" id="qs3" class="radio1  false ">
+                        ضد یخ
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qs2">
+                       
+                        <input type="radio" name="rs1" id="qs2" class="radio1  false ">
+                        گرمای موتور
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon13 radioall box-all">
+                    <p><span> 13 -  </span>هنگام نزدیک شدن به پیچ تند در شرایط جاده خیس و یخبندان کدام یک از موارد زیر باید رعایت شود ؟</p>
+                    <br>
+                    <label class='m glow-on-hover' for="qa1">
+                            
+                     <input type="radio" name="ra1" id="qa1" class="radio1  false ">
+                     تا حد امکان با دنده سنگین حرکت کنید
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qa4">
+                       
+                        <input type="radio" name="ra1" id="qa4" class="radio1  false ">
+                        قبل از رسیدن به پیچ از سرعت خود بکاهید
+                       </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qa3">
+                       
+                        <input type="radio" name="ra1" id="qa3" class="radio1  true ">
+                        هر سه مورد
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qa2">
+                       
+                        <input type="radio" name="ra1" id="qa2" class="radio1  false ">
+                        از حرکت سریع فرمان به طرفین خودداری
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon14 radioall box-all">
+                    <p><span> 14 -  </span> در راه های دارای جدول برای پارک در سراشیبی می باید … ؟</p>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qn1">
+                            
+                     <input type="radio" name="rn1" id="qn1" class="radio1  true ">
+                     ترمز دستی را کشیده، فرمان را به سمت جدول بچرخانیم و اتومبیل را در دنده عقب قرار دهیم
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qn4">
+                       
+                        <input type="radio" name="rn1" id="qn4" class="radio1  false ">
+                        فرمان را به سمت جدول چرخانده و اتومبیل را در دنده بگذاریم
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qn3">
+                       
+                        <input type="radio" name="rn1" id="qn3" class="radio1  false ">
+                        اتومبیل را در دنده گذاشته و مانعی جلوی لاستیک عقب قرار میدهم
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qn2">
+                       
+                        <input type="radio" name="rn1" id="qn2" class="radio1  false ">
+                        ترمز دستی را کشیده فرمان را به سمت جدول برگردانیم
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon15 radioall box-all">
+                    <p><span> 15 -  </span> در هنگام رسیدن به گذرگاه هم سطح راه آهن چه اقدامی لازم است ؟</p>
+                    <br>
+                    <label class='m glow-on-hover' for="qb1">
+                            
+                     <input type="radio" name="rb1" id="qb1" class="radio1  false ">
+                     چراغ فلاشر را روشن می کنیم
+                    </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qb4">
+                       
+                        <input type="radio" name="rb1" id="qb4" class="radio1  true ">
+                        توقف قبل از مانع
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qb3">
+                       
+                        <input type="radio" name="rb1" id="qb3" class="radio1  false ">
+                        عبور سریع
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qb2">
+                       
+                        <input type="radio" name="rb1" id="qb2" class="radio1  false ">
+                        با دقت عبور کنیم
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon16 radioall box-all">
+                    <p><span> 16 -  </span>در هنگام مشاهده چراغ زرد چشمک زن چه اقدامی باید انجام داد ؟</p>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qv1">
+                            
+                     <input type="radio" name="rv1" id="qv1" class="radio1  true ">
+                     با مشاهده چنین چراغی ایست کامل می کنیم
+
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qv4">
+                       
+                        <input type="radio" name="rv1" id="qv4" class="radio1  false ">
+                        عبور می کنیم و احتیاط لازم نیست
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qv3">
+                       
+                        <input type="radio" name="rv1" id="qv3" class="radio1  false ">
+                        قبل از خط ایست و یا گذرگاه عابر پیاده توقف کامل می کنیم
+                       </label>
+                    <br>
+                    <label for="qv2">
+                       
+                        <input type="radio" name="rv1" id="qv2" class="radio1  false ">
+                        از سرعت خود کم کرده و با احتیاط عبور کرده و در ضرورت توقف می کنیم
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon17 radioall box-all">
+                    <p><span> 17 -  </span>در تقاطع برای گردش به راست …… ؟</p>
+                    <br>
+                    <label class='m glow-on-hover' for="qc1">
+                            
+                     <input type="radio" name="rc1" id="qc1" class="radio1  false ">
+                     از منتهی الیه سمت چپ گردش می کنید
+                    </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qc4">
+                       
+                        <input type="radio" name="rc1" id="qc4" class="radio1  true ">
+                        از منتهی الیه سمت راست گردش می کنید
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qc3">
+                       
+                        <input type="radio" name="rc1" id="qc3" class="radio1  false ">
+                        جهت گردش به سمت راست در تقاطع ها نیازی به منتهی الیه سمت راست ندارد
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qc2">
+                       
+                        <input type="radio" name="rc1" id="qc2" class="radio1  false ">
+                        از باند وسط گردش می کنید
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon18 radioall box-all">
+                    <p><span> 18 -  </span>با شنیدن صدای آژیر وسایل نقلیه امدادی چه می کنید ؟</p>
+                    <br>
+                    <label class='m glow-on-hover' for="qx1">
+                            
+                     <input type="radio" name="rx1" id="qx1" class="radio1  false ">
+                     با سرعت حرکت می کنیم
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qx4">
+                       
+                        <input type="radio" name="rx1" id="qx4" class="radio1  false ">
+                        سریع تر حرکت می کنیم و با بوق زدن به اتومبیل های جلویی راه را برای وسایل نقلیه امدادی باز می کنیم
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qx3">
+                       
+                        <input type="radio" name="rx1" id="qx3" class="radio1  false ">
+                        بلافاصله علامت داده همان جا متوقف می شوید
+                       </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qx2">
+                       
+                        <input type="radio" name="rx1" id="qx2" class="radio1  true ">
+                        اتومبیل خود را به منتهی الیه سمت راست هدایت می کنید
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon19 radioall box-all">
+                    <p><span> 19 -  </span> کدام یک از موارد زیر مربوط به استفاده از باند سمت چپ در آزاد راه می باشد ؟</p>
+                    <br>
+                    <label class='m glow-on-hover' for="qz1">
+                            
+                     <input type="radio" name="rz1" id="qz1" class="radio1  false ">
+                     برای انجام کارهای تعمیراتی
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qz4">
+                       
+                        <input type="radio" name="rz1" id="qz4" class="radio1  false ">
+                        برای رانندگی در سرعت های بیش از ۹۰ کیلومتر در ساعت
+                       </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qz3">
+                       
+                        <input type="radio" name="rz1" id="qz3" class="radio1  true ">
+                        برای سبقت از سایر وسایل نقلیه
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qz2">
+                       
+                        <input type="radio" name="rz1" id="qz2" class="radio1  false ">
+                        برای شتاب گرفتن وسیله نقلیه
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon20 radioall box-all">
+                    <p><span> 20 -  </span>حرکت با سرعت کم که موجب کندی عبور و مرور می گردد … ؟</p>
+                    <br>
+                    <label class='m1 glow-on-hover' for="q01">
+                            
+                     <input type="radio" name="r01" id="q01" class="radio1  true ">
+                     خلاف مقررات است
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q04">
+                       
+                        <input type="radio" name="r01" id="q04" class="radio1  false ">
+                        دقیقا برابر مقررات است
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q03">
+                       
+                        <input type="radio" name="r01" id="q03" class="radio1  false ">
+                        در بعضی مواقع ایرادی ندارد
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q02">
+                       
+                        <input type="radio" name="r01" id="q02" class="radio1  false ">
+                        در خیابان های فرعی ایرادی ندارد
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon21 radioall box-all">
+                    <p><span> 21 -  </span>مطابق قانون کدام یک از گزینه های زیر در برابر دیگر سرنشینان مسئولیت دارد ؟</p>
+                    <br>
+                    <label class='m glow-on-hover' for="q91">
+                            
+                     <input type="radio" name="r91" id="q91" class="radio1  false ">
+                     راننده
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q94">
+                       
+                        <input type="radio" name="r91" id="q94" class="radio1  false ">
+                        مسافر روی صندلی جلو
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q93">
+                       
+                        <input type="radio" name="r91" id="q93" class="radio1  false ">
+                        با تجربه ترین شخص
+                       </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="q92">
+                       
+                        <input type="radio" name="r91" id="q92" class="radio1  true ">
+                        شخصی که دارای گواهینامه رانندگی است
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon22 radioall box-all">
+                    <p><span> 22 -  </span> کدام تابلو درباره عبور عابر پیاده هشدار می دهد؟</p>
+                    <br>
+                    <label class='m glow-on-hover' for="q81">
+                            
+                     <input type="radio" name="r81" id="q81" class="radio1  false ">
+                     تابلوی شماره سه  </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="q84">
+                       
+                        <input type="radio" name="r81" id="q84" class="radio1  true ">
+                        تابلوی شماره یک
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q83">
+                       
+                        <input type="radio" name="r81" id="q83" class="radio1  false ">
+                        تابلوی شماره چهار
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q82">
+                       
+                        <input type="radio" name="r81" id="q82" class="radio1  false ">
+                        تابلوی شماره دو
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon23 radioall box-all">
+                    <p><span> 23 -  </span>شکل زیر چه موردی را هشدار می دهد؟
+
+                    </p>
+                    <br>
+                    <img src="./img/soalat-1.jpg" alt="">
+                    <br>
+                    <label class='m glow-on-hover' for="q71">
+                            
+                     <input type="radio" name="r71" id="q71" class="radio1  false ">
+                     در هنگام عبور از کنار گذر حق تقدم عبور با وسیله نقلیه است.
+                    </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="q74">
+                       
+                        <input type="radio" name="r71" id="q74" class="radio1  true ">
+                        اگر شما قصد گردش از قسمت کنار گذر تقاطع را دارید باید مراقب حرکت عابرین پیاده که در حال گذر می باشند بوده و به آنها اجازه عبور دهید.
+
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q73">
+                       
+                        <input type="radio" name="r71" id="q73" class="radio1  false ">
+                        اگر شما قصد گردش از قسمت کنار گذر تقاطع را دارید می توانید با احتیاط عبور کنید.
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q72">
+                       
+                        <input type="radio" name="r71" id="q72" class="radio1  false ">
+                        هیچ کدام
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon24 radioall box-all">
+                    <p><span> 24 -  </span>کدامیک از تابلوهای زیر به معنای خطر می باشد؟</p>
+                    <br>
+                    <img src="./img/aeennamenew.jpg" alt="">
+                    <br>
+                    <label class='m glow-on-hover' for="q61">
+                            
+                     <input type="radio" name="r61" id="q61" class="radio1  false ">
+                     تابلو شماره 1  </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q64">
+                       
+                        <input type="radio" name="r61" id="q64" class="radio1  false ">
+                        تابلو شماره 2
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q63">
+                       
+                        <input type="radio" name="r61" id="q63" class="radio1  false ">
+                        تابلو شماره 2
+                       </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="q62">
+                       
+                        <input type="radio" name="r61" id="q62" class="radio1  true ">
+                        تابلو شماره 3
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon25 radioall box-all">
+                    <p><span> 25 -  </span>شکل زیر چه موردی را هشدار می دهد؟</p>
+                    <br>
+                    <img src="./img/aeenname.jpg" alt="">
+                    <br>
+                    <label class='m1 glow-on-hover' for="q51">
+                            
+                     <input type="radio" name="r51" id="q51" class="radio1  true ">
+                     زمانی که شرایط جاده استاندارد نیست و چاله و دست انداز وجود دارد باید احتیاط نمود.  </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q54">
+                       
+                        <input type="radio" name="r51" id="q54" class="radio1  false ">
+                        در شرایطی همانند مه یا ریزش باران که شعاع دید کم است باید با سرعتی کمتر از محدوده سرعت قانونی حرکت نمود.
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q53">
+                       
+                        <input type="radio" name="r51" id="q53" class="radio1  false ">
+                        در شرایطی که در جاده عابر پیاده یا دوچرخه سوار وجود دارد باید سرعت مناسب را انتخاب نمود.
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q52">
+                       
+                        <input type="radio" name="r51" id="q52" class="radio1  false ">
+                        در نزدیکی مراکز خرید از سرعت خود بکاهید.
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon26 radioall box-all">
+                    <p><span> 26 -  </span>هنرجوی گرامی نام خطوط مشخص شده در تصویر زیر چیست؟
+
+                    </p>
+                    <br>
+                    <img src="./img/ewrew.jpg" alt="">
+                    <br>
+                    <label class='m glow-on-hover' for="q41">
+                            
+                     <input type="radio" name="r41" id="q41" class="radio1  false ">
+                     خطوط زیگزاگ
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q44">
+                       
+                        <input type="radio" name="r41" id="q44" class="radio1  false ">
+                        خطوط شطرنجی
+                       </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="q43">
+                       
+                        <input type="radio" name="r41" id="q43" class="radio1  true ">
+                        خطوط هاشور           </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q42">
+                       
+                        <input type="radio" name="r41" id="q42" class="radio1  false ">
+                        هیچ کدام
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon27 radioall box-all">
+                    <p><span> 27 -  </span>در تقاطع شکل زیر حق تقدم را مشخص کنید. ( آمبولانس در حال ماموریت است)</p>
+                    <br>
+                    <img src="./img/am.png" alt="">
+                    <br>
+                    <label class='m glow-on-hover' for="q31">
+                            
+                     <input type="radio" name="r31" id="q31" class="radio1  false ">
+                     سبز- آمبولانس- زرد </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="q34">
+                       
+                        <input type="radio" name="r31" id="q34" class="radio1  true ">
+                        زرد - آمبولانس - سبز  </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q33">
+                       
+                        <input type="radio" name="r31" id="q33" class="radio1  false ">
+                        آمبولانس- سبز- زرد </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q32">
+                       
+                        <input type="radio" name="r31" id="q32" class="radio1  false ">
+                      فرقی نداره  </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon28 radioall box-all">
+                    <p><span> 28 -  </span> نام نقاط قرمز رنگ مشخص شده در تصویر زیر چیست؟
+                    </p>
+                    <br>
+                    <img src="./img/testsoal.jpg" alt="">
+                    <br>
+                    <label class='m1 glow-on-hover' for="q21">
+                            
+                     <input type="radio" name="r21" id="q21" class="radio1  true ">
+                     محدوده نقاط کور در خودروهای سنگین.
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q24">
+                       
+                        <input type="radio" name="r21" id="q24" class="radio1  false ">
+                        نقاط خطرناک</label>
+                    <br>
+                    <label class='m glow-on-hover' for="q23">
+                       
+                        <input type="radio" name="r21" id="q23" class="radio1  false ">
+                        نقطه کور ماشین سنگین
+                       </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q22">
+                       
+                        <input type="radio" name="r21" id="q22" class="radio1  false ">
+                        همه موارد
+                       </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon29 radioall box-all">
+                    <p><span> 29 -  </span>در میدان ها حق تقدم عبور با کدام وسیله است؟ </p>
+                    <br>
+                    <img src="./img/sykkel10.jpg" alt="">
+                    <br>
+                    <label class='m glow-on-hover' for="q11">
+                            
+                     <input type="radio" name="r11" id="q11" class="radio1  false ">
+                     وسیله ای اول وارد میشود  </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q14">
+                       
+                        <input type="radio" name="r11" id="q14" class="radio1  false ">
+                        وسیله ای که زودتر وارد میدان شده  </label>
+                    <br>
+                    <label class='m glow-on-hover' for="q13">
+                       
+                        <input type="radio" name="r11" id="q13" class="radio1  false ">
+                        هیچکدام
+                    </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="q12">
+                       
+                        <input type="radio" name="r11" id="q12" class="radio1  true ">
+                        وسیله ای که در درون میدان در حال حرکت است</label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="gradient-borderr azmon30 radioall box-all">
+                    <p><span> 30 -  </span>هنرجوی گرامی نوع پارک تصویر زیر را مشخص کنید.</p>
+                    <br>
+                    <img src="./img/testsoall.jpg" alt="">
+                    <br>
+                    <label class='m glow-on-hover' for="qy1">
+                            
+                     <input type="radio" name="q" id="qy1" class="radio1  false nb">
+                     پارک عمودی
+                    </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qt4">
+                       
+                        <input type="radio" name="q" id="qt4" class="radio1  false ">
+                        پارک مورب
+                    </label>
+                    <br>
+                    <label class='m1 glow-on-hover' for="qe3">
+                       
+                        <input type="radio" name="q" id="qe3" class="radio1  true ">
+                        خطوط پارک افقی </label>
+                    <br>
+                    <label class='m glow-on-hover' for="qr2">
+                       
+                        <input type="radio" name="q" id="qr2" class="radio1  false ">
+                        پارک مناسب 
+                    </label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="submit">
+                    <span class="btn btn-success " onclick="post()">پایان آزمون</span>
+
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./javascript/jquerry/jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="./javascript/qs.js"></script>
+
+
+
+
+</html>
